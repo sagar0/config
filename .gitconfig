@@ -23,7 +23,7 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   # how current branch name, used by pub
   branch-name = !git for-each-ref --format='%(refname:short)' `git symbolic-ref HEAD`
-	root = rev-parse --show-toplevel
+  root = rev-parse --show-toplevel
 [diff]
 	renames = true
 [filter "media"]
