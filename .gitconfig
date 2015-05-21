@@ -1,0 +1,38 @@
+[user]
+	name = Sagar Vemuri
+	email = sagar.vemuri@gmail.com
+[color]
+	branch = auto
+	diff = auto
+	status = auto
+	ui = auto
+[push]
+	default = nothing
+
+[alias]
+  co = checkout
+  st = status
+  #ci = commit
+  #f = fetch
+  #p = pull
+  #com = checkout master
+  #dom = diff origin/master
+  #mom = merge origin/master
+  #rpo = remote prune origin
+  # pretty print commit log
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+  # how current branch name, used by pub
+  branch-name = !git for-each-ref --format='%(refname:short)' `git symbolic-ref HEAD`
+	root = rev-parse --show-toplevel
+[diff]
+	renames = true
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[http]
+	postBuffer = 524288000
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
